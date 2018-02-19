@@ -1,0 +1,21 @@
+{
+  "name": "pong",
+  "version": "0.0.1",
+  "main": "dist/pong.cjs.js",
+  "module": "dist/pong.esm.js",
+  "browser": "dist/pong.umd.js",
+  "devDependencies": {
+    "rollup": "^0.50.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
