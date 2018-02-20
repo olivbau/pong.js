@@ -5,7 +5,7 @@ import pkg from './package.json';
 export default [
 	// browser-friendly UMD build
 	{
-		input: 'src/main.js',
+		input: 'src/index.js',
 		output: {
 			name: 'pong',
 			file: pkg.browser,
@@ -19,7 +19,7 @@ export default [
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
 	{
-		input: 'src/main.js',
+		input: 'src/index.js',
 		external: ['ms'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },

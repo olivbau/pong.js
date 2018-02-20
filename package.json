@@ -1,21 +1,44 @@
 {
   "name": "pong",
+  "description": "One of the earliest arcade video games",
   "version": "0.0.1",
   "main": "dist/pong.cjs.js",
   "module": "dist/pong.esm.js",
   "browser": "dist/pong.umd.js",
   "devDependencies": {
+    "jsdoc": "^3.5.5",
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.3"
   },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
-    "pretest": "npm run build"
+    "pretest": "npm run build",
+    "docs": "documentation build src/** -f html -o docs",
+    "lint-doc": "documentation lint src/**"
+    
   },
   "files": [
     "dist"
-  ]
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivbau/pong.js.git"
+  },
+  "keywords": [
+    "pong"
+  ],
+  "author": "olivbau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olivbau/pong.js/issues"
+  },
+  "homepage": "https://github.com/olivbau/pong.js#readme"
 }

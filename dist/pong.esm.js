@@ -1,9 +1,33 @@
+/**
+ * 
+ * 
+ * @export
+ * @class Player
+ */
 class Player {
+	/**
+	 * Creates an instance of Player.
+	 * @memberof Player
+	 * @constructor
+	 */
 	constructor () {
 	}
 }
 
-class Pong {
+/**
+ * 
+ * 
+ * @export
+ * @class Pong
+ */
+class Pong$1 {
+	/**
+	 * Creates an instance of Pong.
+	 * @param {any} height 
+	 * @param {any} width 
+	 * @memberof Pong
+	 * @constructor
+	 */
 	constructor (height, width) {
 		this.height = height;
 		this.width = width;
@@ -12,4 +36,4 @@ class Pong {
 	}
 }
 
-export default Pong;
+export default Pong$1;
