@@ -2,12 +2,40 @@
 
 ### Table of Contents
 
+-   [Ball](#ball)
+    -   [update](#update)
 -   [Player](#player)
+    -   [update](#update-1)
 -   [Pong](#pong)
+    -   [update](#update-2)
+
+## Ball
+
+The ball class
+
+**Parameters**
+
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+### update
+
+**Parameters**
+
+-   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## Player
 
 The player class
+
+**Parameters**
+
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+### update
+
+**Parameters**
+
+-   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## Pong
 
@@ -15,5 +43,10 @@ The pong class
 
 **Parameters**
 
--   `height` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `width` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+### update
+
+**Parameters**
+
+-   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
