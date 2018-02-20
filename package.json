@@ -16,9 +16,8 @@
     "dev": "rollup -c -w",
     "test": "node test/test.js",
     "pretest": "npm run build",
-    "docs": "documentation build src/** -f md -o ./docs/docs",
-    "lint-doc": "documentation lint src/**"
-    
+    "docs": "documentation build src/** -f md -o ./docs/README.md",
+    "lint:docs": "documentation lint src/**"
   },
   "files": [
     "dist"
