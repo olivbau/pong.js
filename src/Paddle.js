@@ -9,8 +9,8 @@ import Rectangle from './Rectangle'
  * @param {number} options.height - height
  */
 export default class Paddle extends Rectangle {
-	constructor (x, y, width = 1, height = 1) {
-		super(x, y, width, height)
+	constructor (x, y, width = 1, height = 1, speed = 100) {
+		super(x, y, width, height, speed)
 		this.direction = 0
 	}
 

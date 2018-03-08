@@ -40,18 +40,9 @@ class Rectangle {
     }
 }
 
-/**
- * The paddle class
- * @class Paddle
- * @param {Object} options 
- * @param {number} options.x - x position
- * @param {number} options.y - y position
- * @param {number} options.width - width
- * @param {number} options.height - height
- */
 class Paddle extends Rectangle {
-	constructor (x, y, width = 1, height = 1) {
-		super(x, y, width, height);
+	constructor (x, y, width = 1, height = 1, speed = 100) {
+		super(x, y, width, height, speed);
 		this.direction = 0;
 	}
 
@@ -90,15 +81,22 @@ class Ball extends Rectangle {
 
 }
 
+/**
+ * The pong class
+ * @class Pong
+ * @param {Object} options - Pong options
+ * @param {number} [options.width = 400] - Pong width
+ * @param {number} [options.height = 400] - Pong height
+ */
 class Pong {
 	constructor ({
-		width = 400,
+		width = 600,
 		height = 400,
 		winningScore = 5,
 		scoreA = 0,
 		scoreB = 0,
-		paddleA = new Paddle(width/20, height/2, width/100, height/4),
-		paddleB = new Paddle(width - width/20, height/2, width/100, height/4),
+		paddleA = new Paddle(width/20, height/2, width/100, height/4, height),
+		paddleB = new Paddle(width - width/20, height/2, width/100, height/4, height),
 		ball = new Ball(width/2, height/2, width/100, width/100, 400, 0)
 	} = {}) {
 		this.width = width;
@@ -119,14 +117,25 @@ class Pong {
     update (delta = 1) {
 		this.paddleA.update(delta);
 		this.paddleB.update(delta);
+		this.contrainPaddles();
 		if (this.endOfMatch) return
 		this.ball.update(delta);
-
 		this.resolveEdgeCollision();
 		this.resolvePaddleCollision();
 		this.checkEndOfSet();
 	}
 
+	contrainPaddles () {
+		if (this.paddleA.top < 0) this.paddleA.top = 0;
+		if (this.paddleA.bottom > this.height) this.paddleA.bottom = this.height;
+		if (this.paddleB.top < 0) this.paddleB.top = 0;
+		if (this.paddleB.bottom > this.height) this.paddleB.bottom = this.height;
+	}
+
+	/**
+     * resolveEdgeCollision
+     * @private
+     */
 	resolveEdgeCollision () {
 		if(this.ball.top < 0) {
 			this.ball.top = 0;
@@ -138,6 +147,10 @@ class Pong {
 		}
 	}
 
+    /**
+     * resolvePaddleCollision
+     * @private
+     */
 	resolvePaddleCollision() {
 		if(this.endOfSet) return
 		this.endOfSet = false;

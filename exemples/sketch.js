@@ -1,11 +1,11 @@
-const width = 400
+const width = 800
 const height = 400
 
 
 function setup() {
     createCanvas(width, height)
     frameRate(60);
-    pong = new Pong()
+    pong = new Pong({width: width, height: height})
 }
 
 function keyReleased() {
@@ -46,8 +46,8 @@ function draw() {
     if(frameRate()) pong.update(1/frameRate())
 
     textSize(32);
-    text(pong.scoreA, 32, 40);
-    text(pong.scoreB, width-64, 40);
+    text(pong.scoreA, 64, 40);
+    text(pong.scoreB, width-64-32, 40);
 }
 
 function drawPaddle(paddle) {
