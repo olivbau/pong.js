@@ -34,6 +34,15 @@ class Rectangle {
     }
 }
 
+/**
+ * The paddle class
+ * @class Paddle
+ * @param {Object} options 
+ * @param {number} options.x - x position
+ * @param {number} options.y - y position
+ * @param {number} options.width - width
+ * @param {number} options.height - height
+ */
 class Paddle extends Rectangle {
 	constructor (x, y, width = 1, height = 1) {
 		super(x, y, width, height);
@@ -52,8 +61,8 @@ class Paddle extends Rectangle {
 		this.direction = 0;
 	}
 
-	/**
-     * @param  {number} delta
+    /**
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta) {
 		this.y += this.direction*this.speed*delta;
@@ -66,7 +75,7 @@ class Ball extends Rectangle {
     }
     
     /**
-     * @param  {number} delta
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta = 1) {
         this.x += (this.speed*Math.cos(this.angle))*delta;
@@ -75,13 +84,6 @@ class Ball extends Rectangle {
 
 }
 
-/**
- * The pong class
- * @class Pong
- * @param {Object} options - Pong options
- * @param {number} [options.width = 400] - Pong width
- * @param {number} [options.height = 400] - Pong height
- */
 class Pong {
 	constructor ({
 		width = 400,
@@ -106,7 +108,7 @@ class Pong {
 	}
 	
     /**
-     * @param  {number} delta
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta = 1) {
 		this.paddleA.update(delta);

@@ -21,7 +21,7 @@ The ball class
 
 **Parameters**
 
--   `delta` **[number][8]**  (optional, default `1`)
+-   `delta` **[number][8]** Delta Time (optional, default `1`)
 
 ## Paddle
 
@@ -39,7 +39,7 @@ The paddle class
 
 **Parameters**
 
--   `delta` **[number][8]** 
+-   `delta` **[number][8]** Delta Time (optional, default `1`)
 
 ## Pong
 
@@ -55,7 +55,7 @@ The pong class
 
 **Parameters**
 
--   `delta` **[number][8]**  (optional, default `1`)
+-   `delta` **[number][8]** Delta Time (optional, default `1`)
 
 [1]: #ball
 

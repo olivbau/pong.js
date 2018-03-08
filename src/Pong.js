@@ -32,7 +32,7 @@ export default class Pong {
 	}
 	
     /**
-     * @param  {number} delta
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta = 1) {
 		this.paddleA.update(delta)

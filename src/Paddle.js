@@ -26,8 +26,8 @@ export default class Paddle extends Rectangle {
 		this.direction = 0
 	}
 
-	/**
-     * @param  {number} delta
+    /**
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta) {
 		this.y += this.direction*this.speed*delta

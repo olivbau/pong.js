@@ -10,7 +10,7 @@ export default class Ball extends Rectangle {
     }
     
     /**
-     * @param  {number} delta
+     * @param  {number} [delta = 1] - Delta Time
      */
     update (delta = 1) {
         this.x += (this.speed*Math.cos(this.angle))*delta
