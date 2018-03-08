@@ -2,6 +2,8 @@
  * The paddle class
  * @class Paddle
  * @param {Object} options 
+ * @param {number} options.x - x position
+ * @param {number} options.y - y position
  */
 class Paddle {
 	constructor (options = {}) {
@@ -58,19 +60,6 @@ class Ball {
 
 }
 
-/**
- * Returns a random number between the specified values. The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max.
- * @param  {number} min
- * @param  {number} max
- */
-
-/**
- * The pong class
- * @class Pong
- * @param {Object} options - Pong options
- * @param {number} options.width - Pong width
- * @param {number} options.height - Pong height
- */
 class Pong {
 	constructor (options = {}) {
 		this.height = options.height | 400;

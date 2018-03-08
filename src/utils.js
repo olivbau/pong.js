@@ -67,11 +67,6 @@ export function collideLineLine(x1, y1, x2, y2, x3, y3, x4, y4,calcIntersection)
     return false;
 }
 
-/**
- * Returns a random number between the specified values. The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max.
- * @param  {number} min
- * @param  {number} max
- */
 export function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }

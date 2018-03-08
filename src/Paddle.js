@@ -2,6 +2,8 @@
  * The paddle class
  * @class Paddle
  * @param {Object} options 
+ * @param {number} options.x - x position
+ * @param {number} options.y - y position
  */
 export default class Paddle {
 	constructor (options = {}) {
