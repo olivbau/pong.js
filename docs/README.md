@@ -44,7 +44,9 @@ The pong class
 
 **Parameters**
 
--   `options` **[Object][8]** 
+-   `options` **[Object][8]** Pong options
+    -   `options.width` **[number][9]** Pong width
+    -   `options.height` **[number][9]** Pong height
 
 ### update
 
