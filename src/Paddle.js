@@ -1,18 +1,16 @@
+import Rectangle from './Rectangle'
 /**
  * The paddle class
  * @class Paddle
  * @param {Object} options 
  * @param {number} options.x - x position
  * @param {number} options.y - y position
- * @param {number} options.h - height
+ * @param {number} options.width - width
+ * @param {number} options.height - height
  */
-export default class Paddle {
-	constructor (options = {}) {
-		this.x = options.x
-		this.y = options.y
-		this.w = options.w
-		this.h = options.h
-		this.speed = options.speed | this.h*4
+export default class Paddle extends Rectangle {
+	constructor (x, y, width = 1, height = 1) {
+		super(x, y, width, height)
 		this.direction = 0
 	}
 

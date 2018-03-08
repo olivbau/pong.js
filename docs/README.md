@@ -21,7 +21,7 @@ The ball class
 
 **Parameters**
 
--   `delta` **[number][8]** 
+-   `delta` **[number][8]**  (optional, default `1`)
 
 ## Paddle
 
@@ -32,7 +32,8 @@ The paddle class
 -   `options` **[Object][7]** 
     -   `options.x` **[number][8]** x position
     -   `options.y` **[number][8]** y position
-    -   `options.h` **[number][8]** height
+    -   `options.width` **[number][8]** width
+    -   `options.height` **[number][8]** height
 
 ### update
 
@@ -47,14 +48,14 @@ The pong class
 **Parameters**
 
 -   `options` **[Object][7]** Pong options
-    -   `options.width` **[number][8]** Pong width
-    -   `options.height` **[number][8]** Pong height
+    -   `options.width` **[number][8]** Pong width (optional, default `400`)
+    -   `options.height` **[number][8]** Pong height (optional, default `400`)
 
 ### update
 
 **Parameters**
 
--   `delta` **[number][8]** 
+-   `delta` **[number][8]**  (optional, default `1`)
 
 [1]: #ball
 

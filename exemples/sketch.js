@@ -27,6 +27,8 @@ function keyPressed() {
         case 76: // l is presses
             pong.paddleB.down()
             break;
+        case 82:
+            pong.resetMatch()
         default:
             break;
     }
@@ -42,18 +44,22 @@ function draw() {
 
     // if avoid division by 0
     if(frameRate()) pong.update(1/frameRate())
+
+    textSize(32);
+    text(pong.scoreA, 32, 40);
+    text(pong.scoreB, width-64, 40);
 }
 
 function drawPaddle(paddle) {
     fill(255);
     strokeWeight(0);
     rectMode(CENTER);
-    rect(paddle.x, paddle.y, paddle.w, paddle.h);    
+    rect(paddle.x, paddle.y, paddle.width, paddle.height);    
 }
 
 function drawBall(ball) {
     fill(255);
     strokeWeight(0);
     rectMode(CENTER);
-    rect(ball.x, ball.y, ball.w, ball.h);    
+    rect(ball.x, ball.y, ball.width, ball.height);    
 }

@@ -3,13 +3,17 @@
   "description": "One of the earliest arcade video games",
   "version": "0.0.1",
   "main": "dist/pong.cjs.js",
+  "min_main": "dist/pong.cjs.min.js",
   "module": "dist/pong.esm.js",
+  "min_module": "dist/pong.esm.min.js",
   "browser": "dist/pong.umd.js",
+  "min_browser": "dist/pong.umd.min.js",
   "devDependencies": {
     "documentation": "^6.1.0",
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0",
     "serve": "^6.5.2"
   },
   "scripts": {
@@ -28,7 +32,9 @@
     "doc": "docs",
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "matter-js": "^0.14.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olivbau/pong.js.git"
