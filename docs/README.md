@@ -8,7 +8,6 @@
     -   [update][4]
 -   [Pong][5]
     -   [update][6]
--   [getRandomArbitrary][7]
 
 ## Ball
 
@@ -16,13 +15,13 @@ The ball class
 
 **Parameters**
 
--   `options` **[Object][8]** 
+-   `options` **[Object][7]** 
 
 ### update
 
 **Parameters**
 
--   `delta` **[number][9]** 
+-   `delta` **[number][8]** 
 
 ## Paddle
 
@@ -30,13 +29,16 @@ The paddle class
 
 **Parameters**
 
--   `options` **[Object][8]** 
+-   `options` **[Object][7]** 
+    -   `options.x` **[number][8]** x position
+    -   `options.y` **[number][8]** y position
+    -   `options.h` **[number][8]** height
 
 ### update
 
 **Parameters**
 
--   `delta` **[number][9]** 
+-   `delta` **[number][8]** 
 
 ## Pong
 
@@ -44,24 +46,15 @@ The pong class
 
 **Parameters**
 
--   `options` **[Object][8]** Pong options
-    -   `options.width` **[number][9]** Pong width
-    -   `options.height` **[number][9]** Pong height
+-   `options` **[Object][7]** Pong options
+    -   `options.width` **[number][8]** Pong width
+    -   `options.height` **[number][8]** Pong height
 
 ### update
 
 **Parameters**
 
--   `delta` **[number][9]** 
-
-## getRandomArbitrary
-
-Returns a random number between the specified values. The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max.
-
-**Parameters**
-
--   `min` **[number][9]** 
--   `max` **[number][9]** 
+-   `delta` **[number][8]** 
 
 [1]: #ball
 
@@ -75,8 +68,6 @@ Returns a random number between the specified values. The returned value is no l
 
 [6]: #update-2
 
-[7]: #getrandomarbitrary
+[7]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
-
-[9]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number

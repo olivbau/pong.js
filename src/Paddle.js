@@ -4,6 +4,7 @@
  * @param {Object} options 
  * @param {number} options.x - x position
  * @param {number} options.y - y position
+ * @param {number} options.h - height
  */
 export default class Paddle {
 	constructor (options = {}) {

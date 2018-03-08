@@ -7,8 +7,6 @@
   "browser": "dist/pong.umd.js",
   "devDependencies": {
     "documentation": "^6.1.0",
-    "jsdoc": "^3.5.5",
-    "pre-commit": "^1.2.2",
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.3",
@@ -23,10 +21,6 @@
     "lint:docs": "documentation lint src/**",
     "exemple:serve": "serve ./exemples"
   },
-  "pre-commit": [
-    "lint:docs",
-    "docs"
-  ],
   "files": [
     "dist"
   ],

@@ -10,6 +10,7 @@
  * @param {Object} options 
  * @param {number} options.x - x position
  * @param {number} options.y - y position
+ * @param {number} options.h - height
  */
 class Paddle {
 	constructor (options = {}) {
@@ -66,6 +67,13 @@ class Ball {
 
 }
 
+/**
+ * The pong class
+ * @class Pong
+ * @param {Object} options - Pong options
+ * @param {number} options.width - Pong width
+ * @param {number} options.height - Pong height
+ */
 class Pong {
 	constructor (options = {}) {
 		this.height = options.height | 400;
