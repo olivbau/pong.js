@@ -64,6 +64,13 @@ class Ball {
  * @param  {number} max
  */
 
+/**
+ * The pong class
+ * @class Pong
+ * @param {Object} options - Pong options
+ * @param {number} options.width - Pong width
+ * @param {number} options.height - Pong height
+ */
 class Pong {
 	constructor (options = {}) {
 		this.height = options.height | 400;

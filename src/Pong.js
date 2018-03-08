@@ -8,7 +8,9 @@ import { constrain } from './utils';
 /**
  * The pong class
  * @class Pong
- * @param {Object} options 
+ * @param {Object} options - Pong options
+ * @param {number} options.width - Pong width
+ * @param {number} options.height - Pong height
  */
 export default class Pong {
 	constructor (options = {}) {
