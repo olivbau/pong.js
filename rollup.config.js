@@ -2,12 +2,13 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
+var input = 'src/Pong.js'
 export default [
 	// browser-friendly UMD build
 	{
-		input: 'src/index.js',
+		input: input,
 		output: {
-			name: 'pong',
+			name: 'Pong',
 			file: pkg.browser,
 			format: 'umd'
 		},
@@ -19,8 +20,10 @@ export default [
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
 	{
-		input: 'src/index.js',
+		input: input,
 		external: ['ms'],
+		plugins: [
+		],
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }

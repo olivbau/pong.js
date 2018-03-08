@@ -2,12 +2,13 @@
 
 ### Table of Contents
 
--   [Ball](#ball)
-    -   [update](#update)
--   [Player](#player)
-    -   [update](#update-1)
--   [Pong](#pong)
-    -   [update](#update-2)
+-   [Ball][1]
+    -   [update][2]
+-   [Paddle][3]
+    -   [update][4]
+-   [Pong][5]
+    -   [update][6]
+-   [getRandomArbitrary][7]
 
 ## Ball
 
@@ -15,27 +16,27 @@ The ball class
 
 **Parameters**
 
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `options` **[Object][8]** 
 
 ### update
 
 **Parameters**
 
--   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `delta` **[number][9]** 
 
-## Player
+## Paddle
 
-The player class
+The paddle class
 
 **Parameters**
 
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `options` **[Object][8]** 
 
 ### update
 
 **Parameters**
 
--   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `delta` **[number][9]** 
 
 ## Pong
 
@@ -43,10 +44,37 @@ The pong class
 
 **Parameters**
 
--   `options` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `options` **[Object][8]** 
 
 ### update
 
 **Parameters**
 
--   `delta` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `delta` **[number][9]** 
+
+## getRandomArbitrary
+
+Returns a random number between the specified values. The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max.
+
+**Parameters**
+
+-   `min` **[number][9]** 
+-   `max` **[number][9]** 
+
+[1]: #ball
+
+[2]: #update
+
+[3]: #paddle
+
+[4]: #update-1
+
+[5]: #pong
+
+[6]: #update-2
+
+[7]: #getrandomarbitrary
+
+[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[9]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
