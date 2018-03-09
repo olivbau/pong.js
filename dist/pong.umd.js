@@ -40,6 +40,15 @@ class Rectangle {
     }
 }
 
+/**
+ * The paddle class
+ * @class Paddle
+ * @param {Object} options 
+ * @param {number} options.x - x position
+ * @param {number} options.y - y position
+ * @param {number} options.width - width
+ * @param {number} options.height - height
+ */
 class Paddle extends Rectangle {
 	constructor (x, y, width = 1, height = 1, speed = 100) {
 		super(x, y, width, height, speed);
@@ -66,6 +75,11 @@ class Paddle extends Rectangle {
     }
 }
 
+/**
+ * The ball class
+ * @class Ball
+ * @param {Object} options 
+ */
 class Ball extends Rectangle {
 	constructor (x, y, height, width, speed, angle) {
         super(x, y, height, width, speed, angle);

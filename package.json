@@ -21,7 +21,7 @@
     "dev": "rollup -c -w",
     "test": "node test/test.js",
     "pretest": "npm run build",
-    "docs": "documentation build src/** -f md -o ./docs/README.md",
+    "docs": "documentation build src/** -f html -o ./docs/docs/",
     "lint:docs": "documentation lint src/**",
     "exemple:serve": "serve ./exemples"
   },
