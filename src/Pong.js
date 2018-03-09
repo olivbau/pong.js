@@ -10,7 +10,7 @@ import Ball from './Ball'
  */
 export default class Pong {
 	constructor ({
-		width = 600,
+		width = 400,
 		height = 400,
 		winningScore = 5,
 		scoreA = 0,
@@ -45,6 +45,10 @@ export default class Pong {
 		this.checkEndOfSet()
 	}
 
+	/**
+     * contrainPaddles
+     * @private
+     */
 	contrainPaddles () {
 		if (this.paddleA.top < 0) this.paddleA.top = 0
 		if (this.paddleA.bottom > this.height) this.paddleA.bottom = this.height
@@ -61,7 +65,7 @@ export default class Pong {
 			this.ball.top = 0
 			this.ball.angle *= -1
 		}
-		else if(this.ball.bottom > this.width) {
+		if(this.ball.bottom > this.height) {
 			this.ball.bottom = this.height
 			this.ball.angle *= -1
 		}
@@ -79,16 +83,22 @@ export default class Pong {
 		}
 		if(this.ball.left < this.paddleA.right && this.ball.bottom > this.paddleA.top && this.ball.top < this.paddleA.bottom) {
 			this.ball.left = this.paddleA.right
-			this.ball.angle -= Math.PI
+			let val = (this.paddleA.bottom+this.ball.height-this.ball.bottom)/(this.paddleA.height+this.ball.height)
+			this.ball.angle = ((Math.PI/2) * val) - Math.PI/4
 			this.endOfSet = false
 		}
 		else if (this.ball.right > this.paddleB.left && this.ball.bottom > this.paddleB.top && this.ball.top < this.paddleB.bottom) {
 			this.ball.right = this.paddleB.left
-			this.ball.angle += Math.PI
+			let val = (this.paddleB.bottom+this.ball.height-this.ball.bottom)/(this.paddleB.height+this.ball.height)
+			this.ball.angle = -1 * (((Math.PI/2) * val) - Math.PI/4) + Math.PI
 			this.endOfSet = false
 		}
 	}
 
+    /**
+     * scored
+     * @private
+     */
 	scored (player) {
 		if (player == 'A') this.scoreA++
 		if (player == 'B') this.scoreB++
