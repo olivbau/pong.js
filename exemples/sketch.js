@@ -3,7 +3,7 @@ const height = 400
 
 
 function setup() {
-    createCanvas(width, height)
+    let canvas = createCanvas(width, height)
     canvas.parent('sketch-holder');
     frameRate(60);
     pong = new Pong({width: width, height: height})
