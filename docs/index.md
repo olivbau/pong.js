@@ -6,7 +6,7 @@
 
 ## Docs
 
-> [Link to the docs]({{ site.baseurl }}{% link docs.md %})
+> [Link to the docs]({{ "/docs" | relative_url }})
 
 ## Code Samples
 
